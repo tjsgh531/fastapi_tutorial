@@ -3,19 +3,33 @@
 ## File structure
 
 |_ main.py
+
 |_ database.py
+
 |_ models.py
+
 |_ domain
+
 |    |_ answer
+
 |    |_ user
+
 |    |_question
+
 |        |_question_router.py
+
 |        |_question_crud.py
+
 |        |_question_schema.py
+
 |_ frontend
+
     |_ index.html
+
     |_ src
+
         |_js
+
         |_css
 
 ## library
