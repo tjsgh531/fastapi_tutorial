@@ -1,7 +1,7 @@
 # FastAPI tutorial
 
 ## File structure
-
+```
 |_ main.py
 
 |_ database.py
@@ -31,6 +31,7 @@
         |_js
 
         |_css
+```
 
 ## library
 
