@@ -3,6 +3,8 @@ from fastapi.staticfiles import StaticFiles
 
 from domain.question import question_router
 
+from dummy_data import questions, answers
+
 '''테이블 생성 코드(alembic 없이)
 import models
 from database import engine
@@ -14,6 +16,8 @@ app = FastAPI()
 app.include_router(question_router.router)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+''' upload dummy data'''
 if __name__ == '__main__':
     import uvicorn
     uvicorn.run("main:app", reload=False)
