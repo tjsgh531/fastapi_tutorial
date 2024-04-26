@@ -45,6 +45,8 @@ pip install sqlalchemy
 pip install psycopg2
 
 pip install alembic
+
+pip install jinja2
 ```
 
 ## Models
