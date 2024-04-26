@@ -20,9 +20,13 @@ def get_question(db: Session, id:int):
 
 # 데이터 추가하기
 def add_data(db: Session, question: Question):
-    db.add(question)
-    db.commit()
-    db.refresh(question)
+
+    if db.query(Question).filter(Question.subject == question.subject).first() is not None:
+        print(f"이미 DB 존재하는 질문입니다. : {question.subject}")
+    else:
+        db.add(question)
+        db.commit()
+        db.refresh(question)
 
 # 데이터 삭제하기
 def delete_data(db: Session, id:int):

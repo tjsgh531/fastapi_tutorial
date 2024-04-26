@@ -5,6 +5,8 @@ from domain.question import question_schema, question_crud
 
 from fastapi.templating import Jinja2Templates
 
+
+
 router = APIRouter(
     prefix="/question",
 )
