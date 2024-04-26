@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
 from domain.question import question_router
 
@@ -12,6 +13,7 @@ app = FastAPI()
 
 app.include_router(question_router.router)
 
+app.mount("/static", StaticFiles(directory="static"), name="static")
 if __name__ == '__main__':
     import uvicorn
     uvicorn.run("main:app", reload=False)
