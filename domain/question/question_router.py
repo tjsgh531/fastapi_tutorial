@@ -20,3 +20,7 @@ def question_list(db: Session = Depends(get_db)):
 @router.get('/')
 def home(request : Request):
     return templates.TemplateResponse("index.html", {"request": request})
+
+@router.get('/show_list')
+def show_list(request : Request):
+    return templates.TemplateResponse("show_list.html", {"request": request})
