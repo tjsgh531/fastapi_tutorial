@@ -12,10 +12,6 @@ app = FastAPI()
 
 app.include_router(question_router.router)
 
-@app.get("/")
-async def Home():
-    return {"Welcome" : "Home"}
-
 if __name__ == '__main__':
     import uvicorn
     uvicorn.run("main:app", reload=False)
